@@ -1,0 +1,45 @@
+<h3>&#8226; Binding elements directly</h3>
+<p>Name : <input type="text" ng-model="name"> Hello {{name}}</p>
+<hr>
+
+<h3>&#8226; Binding elements through controller</h3>
+<p>{{firstName + " " + lastName}} (printed using curly braces)</p>
+<p><span ng-bind="firstName + ' ' + lastName"></span> (printed using ng-bind)</p>
+
+<h3>&#8226; Rendering objects</h3>
+<p ng-init="person={address:'Fifth Avenue'}">
+    Object: {{person}}
+    <br>
+    Rendering an attribute of the object: {{person.address}}
+</p>
+
+<h3>&#8226; Using ng-repeat</h3>
+<div ng-app="" ng-init="names=['Jani','Hege','Kai']">
+    <ul>
+        <li ng-repeat="x in names">
+            {{ x }}
+        </li>
+    </ul>
+</div>
+
+<h3>&#8226; Validating form inputs</h3>
+<form ng-app="" name="myForm">
+    Email:
+    <input type="email" name="myAddress" ng-model="text" required>
+    <span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span>            
+</form>
+
+<h3>&#8226; Trigger function when clicked</h3>
+<p ng-click="changeAddress()">{{address}} ( <- Click on the name)</p>
+
+<h3>&#8226; Http Service</h3>
+<table class="table table-responsive">
+    <tr>
+        <th>Name</th>
+        <th>Gender</th>
+    </tr>
+    <tr ng-repeat="user in users">
+        <td>{{user.name.first + ' ' + user.name.last}}</td>
+        <td>{{user.gender}}</td>
+    </tr>
+</table>
