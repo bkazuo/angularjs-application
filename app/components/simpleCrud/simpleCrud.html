@@ -1,0 +1,37 @@
+
+<br>
+
+<form class="form-inline">
+   <input class="col-md-2 form-control" type="text" ng-model="new_user.name.first" placeholder="First name">
+   <input class="col-md-2 form-control" type="text" ng-model="new_user.name.last" placeholder="Last name">
+   <input class="col-md-2 form-control" type="text" ng-model="new_user.cell" placeholder="Mobile">
+   <input class="col-md-2 form-control" type="text" ng-model="new_user.email" placeholder="E-mail">
+   
+   <button ng-click="addUser()" class="btn btn-primary">Add user</button>
+</form>
+<hr>
+
+
+<div>
+   <table class="table table-responsive table-hover table-striped">
+      <tr>
+         <th>Name</th>
+         <th>Gender</th>
+         <th>Mobile</th>
+         <th>E-mail</th>
+         <th>Actions</th>
+      </tr>
+      <tr ng-repeat="user in users track by $index">
+         <td>{{user.name.first  + ' ' + user.name.last}}</td>
+         <td>{{user.gender}}</td>
+         <td>{{user.cell}}</td>
+         <td>{{user.email}}</td>
+         <td>
+            <button class="btn btn-danger btn-sm" ng-click="deleteUser($index)">Remove</button>
+         </td>
+      </tr>
+   </table>
+   <div ng-show="!users">
+      <img src="assets/img/loading.gif">
+   </div>
+</div>

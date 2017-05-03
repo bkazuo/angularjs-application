@@ -18,7 +18,7 @@
             <ul class="nav nav-tabs">
                 <li ng-class="{active: activetab == '/'}"><a href="#/">Home</a></li>
                 <li ng-class="{active: activetab == '/basic-examples'}"><a href="#/basic-examples">Basic Examples</a></li>
-                <!-- <li ng-class="{active: activetab == '/simple-crud'}"><a href="#/simple-crud">Simple Crud</a></li> -->
+                <li ng-class="{active: activetab == '/simple-crud'}"><a href="#/simple-crud">Simple Crud</a></li>
             </ul>
 
             <div ng-view></div>
@@ -26,8 +26,9 @@
       <script src="app/app.module.js"></script>
       <script src="app/app.routes.js"></script>
 
-      <script src="app/components/basicExamples/basicExamplesController.js"></script>
       <script src="app/components/home/homeController.js"></script>
+      <script src="app/components/basicExamples/basicExamplesController.js"></script>
+      <script src="app/components/simpleCrud/simpleCrudController.js"></script>
    
 
    </body>

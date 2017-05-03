@@ -12,4 +12,8 @@ app.config(function($routeProvider, $locationProvider) {
         templateUrl : "app/components/basicExamples/basicExamples.html",
         controller : "basicExamplesController"
     })
+    .when("/simple-crud", {
+        templateUrl : "app/components/simpleCrud/simpleCrud.html",
+        controller : "simpleCrudController"
+    })
 });
