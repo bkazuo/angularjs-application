@@ -7,10 +7,13 @@ describe('homeController', function () {
         $controller = _$controller_;
     }));
 
-    describe('sum', function () {
+    beforeEach(function() {
+        $scope = {};
+        var controller = $controller('homeController', { $scope: $scope });
+    });
+
+    describe('sum feature', function () {
 		it('1 + 1 should equal 2', function () {
-			var $scope = {};
-			var controller = $controller('homeController', { $scope: $scope });
 			$scope.x = 1;
 			$scope.y = 2;
 			$scope.sum();
@@ -18,8 +21,6 @@ describe('homeController', function () {
 		});	
 
         it('5 + 2 should equal 7', function () {
-            var $scope = {};
-            var controller = $controller('homeController', { $scope: $scope });
             $scope.x = 5;
             $scope.y = 2;
             $scope.sum();
