@@ -16,4 +16,8 @@ app.config(function($routeProvider, $locationProvider) {
         templateUrl : "app/components/simpleCrud/simpleCrud.html",
         controller : "simpleCrudController"
     })
+    .when("/api-factory", {
+        templateUrl : "app/components/apiFactory/apiFactory.html",
+        controller : "apiFactoryController"
+    })
 });

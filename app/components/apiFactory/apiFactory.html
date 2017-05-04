@@ -1,0 +1,16 @@
+<input type="text" 
+         ng-model="search" 
+         ng-model-options="{ debounce: 800 }"
+         placeholder="Enter full movie name"
+         class="form-control" />
+<hr>
+
+<div id="main-info"  
+     ng-include="'app/components/apiFactory/partials/main-info.html'" 
+     class="col-md-9">
+</div>
+
+<div id="related-results" 
+     ng-include="'app/components/apiFactory/partials/related-results.html'"
+     class="col-md-3">
+</div>

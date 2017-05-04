@@ -1,0 +1,9 @@
+<div ng-if="related.Response!=='False'">
+  Related Results:<hr>
+
+  <ul class="rel-results">
+    <li ng-repeat="movie in related.Search">
+      <span style="cursor:pointer;color:blue" id="{{ $index + 1 }}" ng-click="update(movie)">{{ movie.Title }}</span>, {{ movie.Year }}
+    </li>
+  </ul>
+</div>
